@@ -12,6 +12,7 @@ builder.Services.AddDbContext<DataContext>(cfg =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<SeedDb>();
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
 
 var app = builder.Build();
 
